@@ -3,9 +3,7 @@ import { CheckCircle } from '@mui/icons-material';
 import { Link } from 'react-router-dom';
 import { demoProfilePicture } from '../utils/constants';
 
-const ChannelCard = ({ channelDetail }) => {
-  console.log(channelDetail.id.channelId);
-
+const ChannelCard = ({ channelDetail, marginTop }) => {
   return (
     <Box
       sx={{
@@ -20,6 +18,7 @@ const ChannelCard = ({ channelDetail }) => {
         },
         height: '326px',
         margin: 'auto',
+        marginTop,
       }}
     >
       <Link to={`/channel/${channelDetail?.id?.channelId}`}>
